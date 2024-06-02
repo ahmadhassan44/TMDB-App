@@ -1,6 +1,4 @@
 package com.example.testtask.RoomDatabase;
-
-
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -16,7 +14,6 @@ public class Movie {
     public int getSerialnum() {
         return serialnum;
     }
-
     public void setSerialnum(int serialnum) {
         this.serialnum = serialnum;
     }

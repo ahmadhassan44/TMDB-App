@@ -23,7 +23,6 @@ public interface TMDBApi {
             @Path("movie_id") int movieId,
             @Query("api_key") String apiKey
     );
-
     @GET("search/movie")
     Call<MovieSearchResponse> searchMovies(
             @Query("api_key") String apiKey,
