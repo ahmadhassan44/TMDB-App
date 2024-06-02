@@ -44,7 +44,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchView
         MovieModel model=searchResults.get(position);
         Glide.with(holder.itemView.getContext())
                 .load("https://image.tmdb.org/t/p/w500" + model.getPoster_path())
-                .error(R.drawable.baseline_error_24)
+                .error(R.drawable.placeholder)
                 .into(holder.poster);
         holder.title.setText(model.getTitle());
         holder.overview.setText(model.getOverview());

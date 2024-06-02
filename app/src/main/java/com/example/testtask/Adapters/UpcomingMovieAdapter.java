@@ -41,7 +41,7 @@ public class UpcomingMovieAdapter extends RecyclerView.Adapter<UpcomingMovieAdap
         holder.title.setText(movie.getTitle());
         Glide.with(holder.itemView.getContext())
                 .load("https://image.tmdb.org/t/p/w500" + movie.getBackdrop_path())
-                .error(R.drawable.baseline_error_24)
+                .error(R.drawable.placeholder)
                 .into(holder.backdrop);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

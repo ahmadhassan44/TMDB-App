@@ -15,6 +15,7 @@
             android:id="@+id/recview"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
 
@@ -36,6 +37,7 @@
                 app:title="TestTask" />
 
         </com.google.android.material.appbar.AppBarLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

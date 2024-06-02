@@ -16,6 +16,9 @@
         android:theme="@style/TestTaskTheme"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.PaymentActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.SelectSeatActivity"
             android:exported="false" />
         <activity
