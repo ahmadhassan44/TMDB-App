@@ -43,6 +43,15 @@ public class MovieDetailsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(), SelectSeatActivity.class);
+                intent.putExtra("moviename",movie.getTitle());
+                intent.putExtra("releasedate",movie.getRelease_date());
+                startActivity(intent);
+            }
+        });
     }
     void loadMovieDetailsIntoUi(Movie movie){
         releasedate.setText("In Theatres "+formatDate(movie.getRelease_date(), "yyyy-MM-dd", "MMMM dd, yyyy"));

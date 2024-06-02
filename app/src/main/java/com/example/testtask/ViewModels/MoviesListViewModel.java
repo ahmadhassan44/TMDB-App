@@ -24,7 +24,7 @@ public class MoviesListViewModel extends ViewModel {
         return movies;
     }
     public void refreshMovies() {
-        repository.refreshMoviesindb();
+        repository.refreshMoviesindb(1);
     }
 
 

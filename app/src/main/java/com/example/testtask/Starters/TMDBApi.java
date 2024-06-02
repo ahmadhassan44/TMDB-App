@@ -1,6 +1,8 @@
 package com.example.testtask.Starters;
 
+import com.example.testtask.Responses.GenreResponse;
 import com.example.testtask.Responses.MovieListResponse;
+import com.example.testtask.Responses.MovieSearchResponse;
 import com.example.testtask.Responses.MovieVideosResponse;
 
 import retrofit2.Call;
@@ -19,6 +21,17 @@ public interface TMDBApi {
     @GET("movie/{movie_id}/videos")
     Call<MovieVideosResponse> getMovieTrailers(
             @Path("movie_id") int movieId,
+            @Query("api_key") String apiKey
+    );
+
+    @GET("search/movie")
+    Call<MovieSearchResponse> searchMovies(
+            @Query("api_key") String apiKey,
+            @Query("query") String query,
+            @Query("page") int page
+    );
+    @GET("genre/movie/list")
+    Call<GenreResponse> getGenres(
             @Query("api_key") String apiKey
     );
 }

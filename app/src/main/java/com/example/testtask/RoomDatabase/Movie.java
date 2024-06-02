@@ -9,7 +9,19 @@ import com.example.testtask.Models.MovieModel;
 
 @Entity(tableName = "movies")
 public class Movie {
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "serialnum")
+    private int serialnum;
+
+    public int getSerialnum() {
+        return serialnum;
+    }
+
+    public void setSerialnum(int serialnum) {
+        this.serialnum = serialnum;
+    }
+
+    @ColumnInfo (name="id")
     private int id;
     @ColumnInfo(name="title")
     private String title;
