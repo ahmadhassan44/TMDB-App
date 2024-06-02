@@ -2,6 +2,7 @@ package com.example.testtask.RoomDatabase;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
@@ -17,5 +18,10 @@ public interface MovieDAO {
 
     @Insert
     void addUpcomingMovies(List<Movie> list);
+
+    @Query("delete from movies")
+    void deleteAllMovies();
+    @Query("select * from movies where id=:movieid")
+    Movie findMovieById(int movieid);
 
 }

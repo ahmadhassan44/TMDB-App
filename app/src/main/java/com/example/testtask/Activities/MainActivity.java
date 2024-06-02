@@ -19,6 +19,7 @@ import com.example.testtask.Responses.MovieListResponse;
 import com.example.testtask.RoomDatabase.DatabaseHelper;
 import com.example.testtask.Starters.ApiService;
 import com.example.testtask.Starters.Constants;
+import com.example.testtask.Starters.NetworkCheck;
 import com.example.testtask.Starters.TMDBApi;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -37,16 +38,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        database=DatabaseHelper.getInstance(getApplicationContext());
         fragmentManager = getSupportFragmentManager();
         HomeFragment homeFragment = new HomeFragment();
         switchFragment(homeFragment, false);
         BottomNavigationView bottomNav = findViewById(R.id.bottomnav);
 
 
-        database=DatabaseHelper.getInstance(getApplicationContext());
-        MovieRepository repository=new MovieRepository();
-        repository.getUpcomingMoviesFromApiAndSaveToDb();
         bottomNav.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
