@@ -18,6 +18,10 @@ public abstract class DatabaseHelper extends RoomDatabase {
             instance= Room.databaseBuilder(context,DatabaseHelper.class,DB_NAME).fallbackToDestructiveMigration().allowMainThreadQueries().build();
         return instance;
     }
+    public static DatabaseHelper getInstance()
+    {
+        return instance;
+    }
 
     public abstract MovieDAO movieDAO();
 }

@@ -17,4 +17,8 @@ public class SearchViewModel extends ViewModel {
     public LiveData<List<MovieModel>> searchMovies(String query) {
         return repository.searchMovieByName(query);
     }
+    //this method is solely for testing purposes
+    void setMovieRepository(MovieRepository repository) {
+        this.repository = repository;
+    }
 }

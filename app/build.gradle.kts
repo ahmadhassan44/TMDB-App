@@ -42,6 +42,10 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation("org.mockito:mockito-core:3.6.0")
+    testImplementation("androidx.arch.core:core-testing:2.1.0")
+    testImplementation ("org.powermock:powermock-api-mockito2:2.0.9")
+    testImplementation ("org.powermock:powermock-module-junit4:2.0.9")
 
     //Retrofit
     implementation ("com.squareup.retrofit2:retrofit:2.11.0")
@@ -51,6 +55,4 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:2.6.1")
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.15.1")
-    //Youtube
-
 }
